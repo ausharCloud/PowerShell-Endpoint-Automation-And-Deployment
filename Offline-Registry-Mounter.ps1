@@ -11,12 +11,12 @@ This script iterates over every user profile on the machine:
 
 $Script:POSSQLRegBasePath = 'Software\VB and VBA Program Settings\POSSQL\Settings'
 $Script:POSSQLRegValues = @{
-    'DB'         = 'NKPOS'
-    'PORT'       = '1433'
+    'DB'         = ''
+    'PORT'       = ''
     'PWD'        = ''
-    'SERVER'     = 'noc-sql01'
-    'SQLEOD'     = '1'
-    'SQLRefresh' = '1'
+    'SERVER'     = ''
+    'SQLEOD'     = ''
+    'SQLRefresh' = ''
     'UID'        = ''
 }
 
