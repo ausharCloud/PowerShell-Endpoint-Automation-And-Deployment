@@ -6,10 +6,10 @@ Downloads an installer by scraping a Salesforce Aura API endpoint.
 This script builds a raw Salesforce/Aura API POST request to scrape a vendor help portal for a direct .exe installer link, avoiding manual downloads and authentication prompts.
 #>
 
-function Download-NutrikidsInstaller {
+function Download-Installer {
     [CmdletBinding()]
     param (
-        [string]$ArticleUrl = 'https://help.heartlandschoolsolutions.com/s/article/Install-or-Update-Nutrikids-POS-Serving-Line',
+        [string]$ArticleUrl = '',
         [string]$DestinationPath = 'C:\Temp'
     )
 
@@ -19,13 +19,13 @@ function Download-NutrikidsInstaller {
         New-Item -ItemType Directory -Path $DestinationPath | Out-Null
     }
 
-    $apiEndpoint = 'https://help.heartlandschoolsolutions.com/s/sfsites/aura?r=7&aura.ApexAction.execute=1'
+    $apiEndpoint = ''
 
     $requestHeaders = @{
         'Accept'           = '*/*'
         'Accept-Encoding'  = 'gzip, deflate, br, zstd'
         'Content-Type'     = 'application/x-www-form-urlencoded; charset=UTF-8'
-        'Origin'           = 'https://help.heartlandschoolsolutions.com'
+        'Origin'           = ''
         'User-Agent'       = 'Mozilla/5.0'
         'X-Requested-With' = 'XMLHttpRequest'
     }
